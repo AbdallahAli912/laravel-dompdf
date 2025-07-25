@@ -47,4 +47,15 @@
     },
     "scripts": {
         "test": "phpunit",
-        "check-style"
+        "check-style": "phpcs -p --standard=psr12 src/",
+        "fix-style": "phpcbf -p --standard=psr12 src/",
+        "phpstan": "phpstan analyze --memory-limit=-1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    }
+}
